@@ -9,11 +9,13 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4.1.4
         
-        - name: Welcome message
-          run: echo "My fist Github Actions Job"
+        - name: List and Read file
+          run: |
+            echo "My fist Github Actions Job"
+            ls -ltra
+            cat README.md
         
-        - name:
-          run: ls
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I am a GRAGON....RAWR" >> dragon.txt
 
-        - name:
-          run: cat README.md
+        
